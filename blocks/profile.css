@@ -72,7 +72,7 @@
 
 .profile__edit-button:hover {
   opacity: 1;
-  cursor: url(../images/pointer-icon.svg), pointer;
+  cursor: pointer;
 }
 
 .profile__edit-icon {
@@ -96,7 +96,7 @@
 
 .profile__add-post-button:hover {
   opacity: 0.8;
-  cursor: url(../images/pointer-icon.svg), pointer;
+  cursor: pointer;
 }
 
 .profile__plus-icon {
