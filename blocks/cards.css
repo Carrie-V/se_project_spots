@@ -16,6 +16,7 @@
 .cards__card {
   display: flex;
   flex-direction: column;
+  color: #212121;
 }
 
 .cards__card-image {
@@ -36,7 +37,6 @@
   font-size: 20px;
   line-height: 1.2;
   margin: 12px 0 0;
-  height: 24px;
   max-width: 353px;
   overflow: hidden;
   white-space: nowrap;
@@ -44,23 +44,25 @@
 }
 
 .cards__like-button {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.cards__heart-icon {
-  opacity: 0.4;
-  padding: 0;
+  background-image: url(../images/heart-icon.svg);
   width: 23px;
   height: 20px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.4;
+  padding: 0;
 }
 
-.cards__heart-icon:hover {
+.cards__like-button:hover {
   opacity: 1;
+  cursor: url(../images/pointer-icon.svg), pointer;
 }
 
 @media screen and (max-width: 900px) {
+  .cards {
+    padding: 20px 0 20px;
+  }
+
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
     gap: 20px;
