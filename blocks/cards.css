@@ -72,10 +72,12 @@
   }
 
   .cards__card-caption {
-    font-size:16px;
+    font-size: 16px;
     line-height: 1;
-}
+  }
 
-.cards__heart-icon {
-  width: 20px;
-  height: 18px;
+  .cards__heart-icon {
+    width: 20px;
+    height: 18px;
+  }
+}
