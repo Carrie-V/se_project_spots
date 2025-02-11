@@ -27,5 +27,3 @@ This project is made so all the elements are displayed correctly on popular scre
 **Images/Video**
 
 - [Link to video screen recording of project](https://drive.google.com/file/d/1lVH95riJB3roJIZtCzH2lXoRb5aRB7E3/view?usp=sharing)
-
-Good luck and have fun!
