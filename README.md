@@ -1,6 +1,6 @@
 # Project 3: Spots
 
-An image shareing site.
+An image sharing site.
 
 ## Description
 
@@ -8,7 +8,7 @@ This project is the outline of a social media user profile, like Instagram, wher
 
 ## Deployment
 
-This webpage is deployed to GitHub Pages
+This webpage is deployed to GitHub Pages:
 
 - [Deployment Link] (https://carrie-v.github.io/se_project_spots/)
 
