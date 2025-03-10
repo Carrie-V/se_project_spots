@@ -39,6 +39,12 @@
   background-repeat: no-repeat;
   border: none;
   background-color: #fff;
+  opacity: 0.4;
+}
+
+.modal__close-button:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -73,6 +79,11 @@
   border-radius: 8px;
   font-size: 16px;
   line-height: 1;
+}
+
+.modal__submit-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
