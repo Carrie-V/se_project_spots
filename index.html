@@ -52,7 +52,16 @@
         </section>
         <section class="cards">
           <ul class="cards__list">
-            <li class="cards__card">
+            <template id="card-template">
+              <li class="card">
+                <img src="" alt="" class="cards__card-image" />
+                <div class="cards__card-footer">
+                  <h2 class="cards__card-caption"></h2>
+                  <button class="cards__like-button" type="button"></button>
+                </div>
+              </li>
+            </template>
+            <!--<li class="cards__card">
               <img
                 src="./images/val-thorens.png"
                 alt="image description"
@@ -119,7 +128,7 @@
                 <h2 class="cards__card-caption">Mountain house</h2>
                 <button class="cards__like-button" type="button"></button>
               </div>
-            </li>
+            </li> -->
           </ul>
         </section>
       </main>
@@ -131,22 +140,22 @@
           <button type="submit" class="modal__close-button"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
-            <label for="name" class="modal__label">
+            <label for="profile-name-input" class="modal__label">
               Name
               <input
-                id="name"
+                id="profile-name-input"
                 type="text"
                 class="modal__input"
-                placeholder="Bessie Coleman"
+                placeholder="Type your name"
               />
             </label>
-            <label for="description" class="modal__label">
+            <label for="profile-description-input" class="modal__label">
               Description
               <input
-                id="description"
+                id="profile-description-input"
                 type="text"
                 class="modal__input"
-                placeholder="Civil Aviator"
+                placeholder="Describe yourself"
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
