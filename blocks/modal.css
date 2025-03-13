@@ -52,6 +52,7 @@
   margin: 0 0 32px;
   font-size: 32px;
   line-height: 1;
+  color: #212121;
 }
 
 .modal__label {
@@ -80,6 +81,7 @@
   border-radius: 8px;
   font-size: 16px;
   line-height: 1;
+  border: none;
 }
 
 .modal__submit-button:hover {
@@ -106,5 +108,10 @@
 
   .modal__submit-button {
     width: 100%;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
   }
 }
