@@ -53,12 +53,13 @@
         <section class="cards">
           <ul class="cards__list">
             <template id="card-template">
-              <li class="card">
+              <li class="cards__card">
                 <img src="" alt="" class="cards__card-image" />
                 <div class="cards__card-footer">
                   <h2 class="cards__card-caption"></h2>
                   <button class="cards__like-button" type="button"></button>
                 </div>
+                <button class="cards__delete-button" type="button"></button>
               </li>
             </template>
           </ul>
@@ -92,6 +93,51 @@
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">New post</h2>
+          <form name="add-card" class="modal__form" id="add-card-form">
+            <label for="add-card-link-input" class="modal__label">
+              Image link
+              <input
+                id="add-card-link-input"
+                type="url"
+                class="modal__input"
+                name="link"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="image-caption-input" class="modal__label">
+              Caption
+              <input
+                id="image-caption-input"
+                type="text"
+                class="modal__input"
+                name="name"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button
+              type="submit"
+              class="modal__submit-button"
+              id="new-post-save-button"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="view-card-modal">
+        <div class="modal__container modal__container_type_view-card">
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_view-card"
+          ></button>
+          <img class="modal__image" src="" alt="" />
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>
