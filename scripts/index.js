@@ -64,6 +64,20 @@ const viewCardModalCloseButton = viewCardModal.querySelector(
 const viewCardModalImage = viewCardModal.querySelector(".modal__image");
 const viewCardModalCaption = viewCardModal.querySelector(".modal__caption");
 
+const popups = Array.from(document.querySelectorAll(".modal"));
+
+popups.forEach((popup) => {
+  const modalContainer = popup.querySelector(".modal__container");
+  popup.addEventListener("mousedown", (event) => {
+    if (
+      event.target.classList.contains("modal_opened") &&
+      !modalContainer.contains(event.target)
+    ) {
+      closeModal(popup);
+    }
+  });
+});
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".cards__card")
@@ -107,13 +121,6 @@ function openModal(modal) {
   modal.classList.add("modal_opened");
 
   document.addEventListener("keydown", closeModalOnEsc);
-
-  modal.addEventListener("click", (event) => {
-    const modalContainer = modal.querySelector(".modal__container");
-    if (!modalContainer.contains(event.target)) {
-      closeModal(modal);
-    }
-  });
 }
 
 function closeModal(modal) {
@@ -126,6 +133,7 @@ function editProfileFormSubmit(event) {
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editProfileModal);
+  disableButton(editProfileSubmitButton, settings);
 }
 
 function addCardFormSubmit(event) {
@@ -137,8 +145,8 @@ function addCardFormSubmit(event) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   event.target.reset();
-  disableButton(cardModalSubmitButton);
   closeModal(cardModal);
+  disableButton(cardModalSubmitButton, settings);
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -149,7 +157,7 @@ profileEditButton.addEventListener("click", () => {
     editModalNameInput,
     editModalDescriptionInput,
   ]);
-  disableButton(editProfileSubmitButton);
+  disableButton(editProfileSubmitButton, settings);
 });
 
 profileEditModalCloseButton.addEventListener("click", () => {
@@ -158,6 +166,7 @@ profileEditModalCloseButton.addEventListener("click", () => {
 
 addPostButton.addEventListener("click", () => {
   openModal(cardModal);
+  resetValidation(addCardFormElement, [cardModalLinkInput, cardModalNameInput]);
 });
 
 cardModalCloseButton.addEventListener("click", () => {
