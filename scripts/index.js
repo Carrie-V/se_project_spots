@@ -166,7 +166,6 @@ profileEditModalCloseButton.addEventListener("click", () => {
 
 addPostButton.addEventListener("click", () => {
   openModal(cardModal);
-  resetValidation(addCardFormElement, [cardModalLinkInput, cardModalNameInput]);
 });
 
 cardModalCloseButton.addEventListener("click", () => {
