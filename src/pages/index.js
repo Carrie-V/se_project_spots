@@ -1,3 +1,31 @@
+import "./index.css";
+import {
+  disableButton,
+  resetValidation,
+  enableValidation,
+  settings,
+} from "../scripts/validation.js";
+
+import spotsLogo from "../images/spots-logo.svg";
+
+const spotsLogoImage = document.getElementById("spots-logo");
+spotsLogoImage.src = spotsLogo;
+
+import avatar from "../images/Avatar.png";
+
+const avatarImage = document.getElementById("avatar");
+avatarImage.src = avatar;
+
+import editIcon from "../images/edit-icon.svg";
+
+const editIconImage = document.getElementById("edit-icon");
+editIconImage.src = editIcon;
+
+import plusIcon from "../images/plus-icon.svg";
+
+const plusIconImage = document.getElementById("plus-icon");
+plusIconImage.src = plusIcon;
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -185,3 +213,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+enableValidation(settings);

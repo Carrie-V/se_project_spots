@@ -7,34 +7,26 @@
     <meta name="description" content="profile page for user of Spots website" />
     <meta name="keywords" content="spots profile bessie coleman photos" />
     <meta name="author" content="Carrie Velasco" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img
-          class="header__logo"
-          src="./images/spots-logo.svg"
-          alt="Spots Logo"
-        />
+        <img class="header__logo" id="spots-logo" alt="Spots Logo" />
       </header>
       <main class="content">
         <section class="profile">
           <div class="profile__content">
-            <img
-              src="./images/Avatar.png"
-              alt="Avatar for profile"
-              class="profile__avatar"
-            />
+            <img id="avatar" alt="Avatar for profile" class="profile__avatar" />
             <div class="profile__column">
               <div class="profile__text-content">
-                <h1 class="profile__title">Bessie Coleman</h1>
+                <h1 class="profile__title">
+                  Bessie Coleman I'm changing something
+                </h1>
                 <p class="profile__description">Civil Aviator</p>
               </div>
               <button class="profile__edit-button" type="button">
                 <img
-                  src="./images/edit-icon.svg"
+                  id="edit-icon"
                   alt="pencil icon"
                   class="profile__edit-icon"
                 />Edit Profile
@@ -42,11 +34,7 @@
             </div>
           </div>
           <button class="profile__add-post-button" type="button">
-            <img
-              src="./images/plus-icon.svg"
-              alt="plus icon"
-              class="profile__plus-icon"
-            />
+            <img id="plus-icon" alt="plus icon" class="profile__plus-icon" />
             New Post
           </button>
         </section>
@@ -168,7 +156,5 @@
         </div>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>
