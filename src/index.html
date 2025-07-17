@@ -16,12 +16,24 @@
       <main class="content">
         <section class="profile">
           <div class="profile__content">
-            <img id="avatar" alt="Avatar for profile" class="profile__avatar" />
+            <div class="profile__avatar-container">
+              <button class="profile__avatar-button">
+                <img
+                  id="edit-avatar"
+                  alt="edit pencil"
+                  class="profile__edit-avatar-icon"
+                  src="./images/edit-icon-white.svg"
+                />
+              </button>
+              <img
+                id="avatar"
+                alt="Avatar for profile"
+                class="profile__avatar"
+              />
+            </div>
             <div class="profile__column">
               <div class="profile__text-content">
-                <h1 class="profile__title">
-                  Bessie Coleman I'm changing something
-                </h1>
+                <h1 class="profile__title">Bessie Coleman</h1>
                 <p class="profile__description">Civil Aviator</p>
               </div>
               <button class="profile__edit-button" type="button">
@@ -99,6 +111,33 @@
           </form>
         </div>
       </div>
+
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">Edit profile avatar</h2>
+          <form
+            name="edit-avatar"
+            class="modal__form"
+            id="edit-avatar-form"
+            novalidate
+          >
+            <label for="avatar-link-input" class="modal__label">
+              Profile Picture
+              <input
+                id="avatar-link-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span class="modal__error" id="avatar-link-input-error"></span>
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
