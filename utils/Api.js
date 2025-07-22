@@ -60,6 +60,47 @@ class Api {
       return Promise.reject(`Error: ${res.status}`);
     });
   }
+
+  addCard(cardData) {
+    return fetch(`${this._baseUrl}/cards`, {
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify({
+        link: cardData.link,
+        name: cardData.name,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+
+  deleteCard(id) {
+    return fetch(`${this._baseUrl}/cards/${id}`, {
+      method: "DELETE",
+      headers: this._headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+
+  changeLikeStatus(id, isLiked) {
+    const method = isLiked ? "DELETE" : "PUT";
+    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+      method: method,
+      headers: this._headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
 }
 
 export default Api;
