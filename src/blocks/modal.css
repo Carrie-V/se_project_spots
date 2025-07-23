@@ -55,6 +55,14 @@
   padding: 0;
 }
 
+.modal__close-button-delete {
+  top: 0;
+  right: -52px;
+  background-color: transparent;
+  opacity: 1;
+  background-image: url(../images/close-icon-white.svg);
+}
+
 .modal__close-button:hover {
   opacity: 1;
   cursor: pointer;
@@ -78,6 +86,17 @@
   font-weight: 500;
   line-height: 1;
   color: #212121;
+}
+
+.modal__delete-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal__delete-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .modal__label {
@@ -124,6 +143,7 @@
   color: #fff;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1;
   border: none;
 }
@@ -140,6 +160,28 @@
 .modal__submit-button_inactive:hover {
   opacity: 0.5;
   cursor: default;
+}
+
+.modal__delete-button {
+  background-color: #ff6565;
+  color: #212121;
+}
+
+.modal__delete-button:hover {
+  background-color: #ff3333;
+  opacity: 1;
+}
+
+.modal__cancel-button {
+  background-color: #fff;
+  color: #212121;
+  border: 1px solid #212121;
+}
+
+.modal__cancel-button:hover {
+  background-color: #212121;
+  color: #fff;
+  opacity: 1;
 }
 
 .modal__image {
@@ -174,6 +216,8 @@
 
   .modal__container_type_view-card {
     padding: 0;
+    max-width: 90vw;
+    min-width: 288px;
   }
 
   .modal__title {
