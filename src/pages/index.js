@@ -291,11 +291,12 @@ function addCardFormSubmit(event) {
     name: cardModalNameInput.value,
     link: cardModalLinkInput.value,
   };
-  event.target.reset();
-  const cardElement = getCardElement(inputValues);
+
   api
     .addCard(inputValues)
-    .then(() => {
+    .then((newCard) => {
+      event.target.reset();
+      const cardElement = getCardElement(newCard);
       cardsList.prepend(cardElement);
       closeModal(cardModal);
       disableButton(cardModalSubmitButton, settings);
